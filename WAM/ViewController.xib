@@ -6,6 +6,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewController">
             <connections>
+                <outlet property="collectionView" destination="bvX-Zy-iyC" id="V6y-23-ipT"/>
                 <outlet property="view" destination="JwX-1T-cFu" id="xxc-3z-NUw"/>
             </connections>
         </placeholder>
@@ -13,7 +14,65 @@
         <view contentMode="scaleToFill" id="JwX-1T-cFu">
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zYq-TV-cXN">
+                    <rect key="frame" x="130" y="20" width="61" height="30"/>
+                    <state key="normal" title="New Trip">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="newTripPressed" destination="-1" eventType="touchUpInside" id="yb0-ey-xYb"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AJo-NM-GKo">
+                    <rect key="frame" x="0.0" y="57" width="320" height="1"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="59Z-X7-qbB"/>
+                    </constraints>
+                </view>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="bvX-Zy-iyC">
+                    <rect key="frame" x="0.0" y="58" width="320" height="510"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="510" id="tiS-Jq-Zhn"/>
+                    </constraints>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="GKU-18-W9n">
+                        <size key="itemSize" width="320" height="89"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="tiS-Jq-Zhn"/>
+                        </mask>
+                    </variation>
+                </collectionView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WBm-Id-SIg">
+                    <rect key="frame" x="0.0" y="567" width="320" height="1"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="1" id="cuU-yH-IKs"/>
+                        <constraint firstAttribute="height" constant="1" id="njv-gP-VjB"/>
+                    </constraints>
+                </view>
+            </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="WBm-Id-SIg" secondAttribute="trailing" id="1GZ-J0-mkJ"/>
+                <constraint firstAttribute="bottom" secondItem="bvX-Zy-iyC" secondAttribute="bottom" id="5aP-mI-o9S"/>
+                <constraint firstAttribute="trailing" secondItem="bvX-Zy-iyC" secondAttribute="trailing" id="8L3-M5-Foa"/>
+                <constraint firstItem="bvX-Zy-iyC" firstAttribute="top" secondItem="AJo-NM-GKo" secondAttribute="bottom" id="Fkl-t6-kSN"/>
+                <constraint firstItem="zYq-TV-cXN" firstAttribute="top" secondItem="JwX-1T-cFu" secondAttribute="top" constant="20" id="JOs-7O-Zud"/>
+                <constraint firstAttribute="bottom" secondItem="WBm-Id-SIg" secondAttribute="bottom" id="Saq-YF-JRE"/>
+                <constraint firstItem="WBm-Id-SIg" firstAttribute="leading" secondItem="JwX-1T-cFu" secondAttribute="leading" id="Vxq-8O-D7a"/>
+                <constraint firstItem="bvX-Zy-iyC" firstAttribute="leading" secondItem="JwX-1T-cFu" secondAttribute="leading" id="amV-5g-bPx"/>
+                <constraint firstAttribute="centerX" secondItem="zYq-TV-cXN" secondAttribute="centerX" constant="-0.5" id="gy0-IL-W1Z"/>
+                <constraint firstItem="AJo-NM-GKo" firstAttribute="leading" secondItem="JwX-1T-cFu" secondAttribute="leading" id="kqr-ca-IJF"/>
+                <constraint firstAttribute="trailing" secondItem="AJo-NM-GKo" secondAttribute="trailing" id="ktM-He-JtL"/>
+                <constraint firstItem="bvX-Zy-iyC" firstAttribute="top" secondItem="zYq-TV-cXN" secondAttribute="bottom" constant="8" id="s5m-UK-bzs"/>
+            </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
             <point key="canvasLocation" x="245" y="370"/>
         </view>
