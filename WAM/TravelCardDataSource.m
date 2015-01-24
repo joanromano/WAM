@@ -68,6 +68,8 @@ static NSString *const TCDSCellIdentifier = @"CellIdentifier";
 
 - (void)sortDataSourceWithCompletion:(void(^)(void))completion
 {
+    self.cards = [self.cards sort];
+    
     if (completion)
     {
         completion();
