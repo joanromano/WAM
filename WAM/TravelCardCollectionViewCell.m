@@ -10,7 +10,7 @@
 
 @interface TravelCardCollectionViewCell ()
 
-@property (nonatomic, weak) IBOutlet UILabel *cardTitleLabel, *transportTitleLabel, *seatTitleLabel;
+@property (nonatomic, weak) IBOutlet UILabel *cardTitleLabel;
 @property (nonatomic, weak) IBOutlet UIView *separatorView;
 
 @end
@@ -28,20 +28,6 @@
     _cardText = [cardText copy];
     
     self.cardTitleLabel.text = _cardText;
-}
-
-- (void)setTransportText:(NSString *)transportText
-{
-    _transportText = [transportText copy];
-    
-    self.transportTitleLabel.text = transportText;
-}
-
-- (void)setSeatText:(NSString *)seatText
-{
-    _seatText = [seatText copy];
-    
-    self.seatTitleLabel.text = seatText;
 }
 
 - (void)setShouldShowSeparator:(BOOL)shouldShowSeparator
