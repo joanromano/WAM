@@ -43,9 +43,13 @@
 
 - (void)newTrip
 {
+    self.collectionView.alpha = 0.0;
     [self.dataSource shuffleDataSourceWithCompletion:^{
         [self.collectionView reloadData];
         self.titleLabel.text = @"Unsorted Boarding Cards";
+        [UIView animateWithDuration:0.4 animations:^{
+            self.collectionView.alpha = 1.0;
+        }];
     }];
 }
 
