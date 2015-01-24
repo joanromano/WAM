@@ -18,6 +18,7 @@
 		8CB1CE211A743AE900E23396 /* TravelCardCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CB1CE1F1A743AE900E23396 /* TravelCardCollectionViewCell.m */; };
 		8CB1CE221A743AE900E23396 /* TravelCardCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CB1CE201A743AE900E23396 /* TravelCardCollectionViewCell.xib */; };
 		8CB1CE251A743D0000E23396 /* TravelCardDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CB1CE241A743D0000E23396 /* TravelCardDataSource.m */; };
+		8CB1CE2B1A74418F00E23396 /* NSArray+TravelCardAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CB1CE2A1A74418F00E23396 /* NSArray+TravelCardAdditions.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		8CB1CE201A743AE900E23396 /* TravelCardCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TravelCardCollectionViewCell.xib; sourceTree = "<group>"; };
 		8CB1CE231A743D0000E23396 /* TravelCardDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TravelCardDataSource.h; sourceTree = "<group>"; };
 		8CB1CE241A743D0000E23396 /* TravelCardDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TravelCardDataSource.m; sourceTree = "<group>"; };
+		8CB1CE291A74418F00E23396 /* NSArray+TravelCardAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+TravelCardAdditions.h"; sourceTree = "<group>"; };
+		8CB1CE2A1A74418F00E23396 /* NSArray+TravelCardAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+TravelCardAdditions.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +99,8 @@
 				8CB1CDF81A7431DF00E23396 /* AppDelegate.m */,
 				8CB1CE001A7431DF00E23396 /* Images.xcassets */,
 				8CB1CE021A7431DF00E23396 /* LaunchScreen.xib */,
+				8CB1CE291A74418F00E23396 /* NSArray+TravelCardAdditions.h */,
+				8CB1CE2A1A74418F00E23396 /* NSArray+TravelCardAdditions.m */,
 				8CB1CDF31A7431DF00E23396 /* Supporting Files */,
 				8CB1CE1B1A74341000E23396 /* TravelCard.h */,
 				8CB1CE1C1A74341000E23396 /* TravelCard.m */,
@@ -239,6 +244,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8CB1CDFC1A7431DF00E23396 /* ViewController.m in Sources */,
+				8CB1CE2B1A74418F00E23396 /* NSArray+TravelCardAdditions.m in Sources */,
 				8CB1CDF91A7431DF00E23396 /* AppDelegate.m in Sources */,
 				8CB1CDF61A7431DF00E23396 /* main.m in Sources */,
 				8CB1CE1D1A74341000E23396 /* TravelCard.m in Sources */,

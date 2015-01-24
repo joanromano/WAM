@@ -9,6 +9,7 @@
 #import "TravelCardDataSource.h"
 
 #import "TravelCard.h"
+#import "NSArray+TravelCardAdditions.h"
 #import "TravelCardCollectionViewCell.h"
 
 static NSString *const TCDSCellIdentifier = @"CellIdentifier";
@@ -26,7 +27,7 @@ static NSString *const TCDSCellIdentifier = @"CellIdentifier";
 {
     if (self = [super init])
     {
-        _cards = [TravelCard randomTravelCardStackWithNumber:10];
+        _cards = [[TravelCard randomTravelCardStackWithNumber:10] shuffle];
         _collectionView = collectionView;
         _collectionView.dataSource = self;
         [_collectionView registerNib:[UINib nibWithNibName:NSStringFromClass(TravelCardCollectionViewCell.class) bundle:nil] forCellWithReuseIdentifier:TCDSCellIdentifier];
@@ -58,7 +59,7 @@ static NSString *const TCDSCellIdentifier = @"CellIdentifier";
 
 - (void)shuffleDataSourceWithCompletion:(void(^)(void))completion
 {
-    self.cards = [TravelCard randomTravelCardStackWithNumber:10];
+    self.cards = [[TravelCard randomTravelCardStackWithNumber:10] shuffle];
     
     if (completion)
     {
