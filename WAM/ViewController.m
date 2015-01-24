@@ -8,6 +8,8 @@
 
 #import "ViewController.h"
 
+#import "TravelCard.h"
+
 @interface ViewController ()
 
 @end

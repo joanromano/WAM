@@ -12,6 +12,7 @@
 
 @property (nonatomic, copy, readonly) NSString *origin, *destination, *seatAssignment, *transportation;
 
++ (NSArray *)randomTravelCardStackWithNumber:(NSInteger)number;
 - (instancetype)initWithOrigin:(NSString *)origin destination:(NSString *)destination transportation:(NSString *)transportation seat:(NSString *)seatAssignment;
 
 @end
