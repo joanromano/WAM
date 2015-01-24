@@ -10,6 +10,8 @@
 
 @interface ViewController ()
 
+@property (nonatomic, weak) IBOutlet UICollectionView *collectionView;
+
 @end
 
 @implementation ViewController
@@ -17,6 +19,16 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+}
+
+- (IBAction)newTripPressed
+{
+    [self newTrip];
+}
+
+- (void)newTrip
+{
+    
 }
 
 @end
