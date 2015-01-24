@@ -8,9 +8,12 @@
 
 #import "ViewController.h"
 
+#import "TravelCardDataSource.h"
+
 @interface ViewController ()
 
 @property (nonatomic, weak) IBOutlet UICollectionView *collectionView;
+@property (nonatomic, strong) TravelCardDataSource *dataSource;
 
 @end
 
@@ -19,6 +22,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.dataSource = [[TravelCardDataSource alloc] initWithCollectionView:self.collectionView];
 }
 
 - (IBAction)newTripPressed
@@ -28,7 +33,9 @@
 
 - (void)newTrip
 {
-    
+    [self.dataSource shuffleDataSourceWithCompletion:^{
+        [self.collectionView reloadData];
+    }];
 }
 
 @end

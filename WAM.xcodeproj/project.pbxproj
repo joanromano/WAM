@@ -17,6 +17,7 @@
 		8CB1CE1D1A74341000E23396 /* TravelCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CB1CE1C1A74341000E23396 /* TravelCard.m */; };
 		8CB1CE211A743AE900E23396 /* TravelCardCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CB1CE1F1A743AE900E23396 /* TravelCardCollectionViewCell.m */; };
 		8CB1CE221A743AE900E23396 /* TravelCardCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CB1CE201A743AE900E23396 /* TravelCardCollectionViewCell.xib */; };
+		8CB1CE251A743D0000E23396 /* TravelCardDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CB1CE241A743D0000E23396 /* TravelCardDataSource.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,8 @@
 		8CB1CE1E1A743AE900E23396 /* TravelCardCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TravelCardCollectionViewCell.h; sourceTree = "<group>"; };
 		8CB1CE1F1A743AE900E23396 /* TravelCardCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TravelCardCollectionViewCell.m; sourceTree = "<group>"; };
 		8CB1CE201A743AE900E23396 /* TravelCardCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TravelCardCollectionViewCell.xib; sourceTree = "<group>"; };
+		8CB1CE231A743D0000E23396 /* TravelCardDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TravelCardDataSource.h; sourceTree = "<group>"; };
+		8CB1CE241A743D0000E23396 /* TravelCardDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TravelCardDataSource.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +102,8 @@
 				8CB1CE1E1A743AE900E23396 /* TravelCardCollectionViewCell.h */,
 				8CB1CE1F1A743AE900E23396 /* TravelCardCollectionViewCell.m */,
 				8CB1CE201A743AE900E23396 /* TravelCardCollectionViewCell.xib */,
+				8CB1CE231A743D0000E23396 /* TravelCardDataSource.h */,
+				8CB1CE241A743D0000E23396 /* TravelCardDataSource.m */,
 				8CB1CDFA1A7431DF00E23396 /* ViewController.h */,
 				8CB1CDFB1A7431DF00E23396 /* ViewController.m */,
 				8CB1CE191A74326D00E23396 /* ViewController.xib */,
@@ -237,6 +242,7 @@
 				8CB1CDF91A7431DF00E23396 /* AppDelegate.m in Sources */,
 				8CB1CDF61A7431DF00E23396 /* main.m in Sources */,
 				8CB1CE1D1A74341000E23396 /* TravelCard.m in Sources */,
+				8CB1CE251A743D0000E23396 /* TravelCardDataSource.m in Sources */,
 				8CB1CE211A743AE900E23396 /* TravelCardCollectionViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
