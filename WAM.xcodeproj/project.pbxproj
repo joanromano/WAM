@@ -14,6 +14,7 @@
 		8CB1CE041A7431DF00E23396 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CB1CE021A7431DF00E23396 /* LaunchScreen.xib */; };
 		8CB1CE101A7431DF00E23396 /* WAMTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CB1CE0F1A7431DF00E23396 /* WAMTests.m */; };
 		8CB1CE1A1A74326D00E23396 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CB1CE191A74326D00E23396 /* ViewController.xib */; };
+		8CB1CE1D1A74341000E23396 /* TravelCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CB1CE1C1A74341000E23396 /* TravelCard.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		8CB1CE0E1A7431DF00E23396 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8CB1CE0F1A7431DF00E23396 /* WAMTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WAMTests.m; sourceTree = "<group>"; };
 		8CB1CE191A74326D00E23396 /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
+		8CB1CE1B1A74341000E23396 /* TravelCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TravelCard.h; sourceTree = "<group>"; };
+		8CB1CE1C1A74341000E23396 /* TravelCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TravelCard.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,12 +86,14 @@
 			children = (
 				8CB1CDF71A7431DF00E23396 /* AppDelegate.h */,
 				8CB1CDF81A7431DF00E23396 /* AppDelegate.m */,
-				8CB1CDFA1A7431DF00E23396 /* ViewController.h */,
-				8CB1CDFB1A7431DF00E23396 /* ViewController.m */,
-				8CB1CE191A74326D00E23396 /* ViewController.xib */,
 				8CB1CE001A7431DF00E23396 /* Images.xcassets */,
 				8CB1CE021A7431DF00E23396 /* LaunchScreen.xib */,
 				8CB1CDF31A7431DF00E23396 /* Supporting Files */,
+				8CB1CE1B1A74341000E23396 /* TravelCard.h */,
+				8CB1CE1C1A74341000E23396 /* TravelCard.m */,
+				8CB1CDFA1A7431DF00E23396 /* ViewController.h */,
+				8CB1CDFB1A7431DF00E23396 /* ViewController.m */,
+				8CB1CE191A74326D00E23396 /* ViewController.xib */,
 			);
 			path = WAM;
 			sourceTree = "<group>";
@@ -222,6 +227,7 @@
 				8CB1CDFC1A7431DF00E23396 /* ViewController.m in Sources */,
 				8CB1CDF91A7431DF00E23396 /* AppDelegate.m in Sources */,
 				8CB1CDF61A7431DF00E23396 /* main.m in Sources */,
+				8CB1CE1D1A74341000E23396 /* TravelCard.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
