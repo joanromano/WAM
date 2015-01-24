@@ -46,9 +46,7 @@ static NSString *const TCDSCellIdentifier = @"CellIdentifier";
 {
     TravelCard *card = self.cards[indexPath.item];
     TravelCardCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:TCDSCellIdentifier forIndexPath:indexPath];
-    cell.cardText = [NSString stringWithFormat:@"%@ - %@", card.origin, card.destination];
-    cell.transportText = card.transportation;
-    cell.seatText = card.seatAssignment;
+    cell.cardText = [NSString stringWithFormat:@"%@ (%@) - %@ > %@", card.transportation, card.seatAssignment, card.origin, card.destination];
     cell.shouldShowSeparator = indexPath.item != self.cards.count - 1;
     
     return cell;

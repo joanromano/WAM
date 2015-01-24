@@ -12,6 +12,7 @@
 
 @interface ViewController ()
 
+@property (nonatomic, weak) IBOutlet UILabel *titleLabel;
 @property (nonatomic, weak) IBOutlet UICollectionView *collectionView;
 @property (nonatomic, strong) TravelCardDataSource *dataSource;
 
@@ -44,6 +45,7 @@
 {
     [self.dataSource shuffleDataSourceWithCompletion:^{
         [self.collectionView reloadData];
+        self.titleLabel.text = @"Unsorted Boarding Cards";
     }];
 }
 
@@ -55,7 +57,9 @@
                 [self.collectionView moveItemAtIndexPath:[NSIndexPath indexPathForItem:idx inSection:0]
                                              toIndexPath:[NSIndexPath indexPathForItem:currentIndex.integerValue inSection:0]];
             }];
-        } completion:NULL];
+        } completion:^(BOOL finished) {
+            self.titleLabel.text = @"Sorted Trip";
+        }];
     }];
 }
 

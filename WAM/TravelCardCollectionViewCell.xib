@@ -12,23 +12,17 @@
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                 <rect key="frame" x="0.0" y="0.0" width="320" height="89"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="obs-38-cue">
-                        <rect key="frame" x="139" y="20" width="42" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="80o-pV-yqX">
-                        <rect key="frame" x="8" y="48" width="42" height="21"/>
+                        <rect key="frame" x="8" y="34" width="42" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hrd-BD-M3y">
-                        <rect key="frame" x="270" y="48" width="42" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                        <nil key="highlightedColor"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="minimumScaleFactor">
+                                <real key="value" value="0.20000000000000001"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="adjustsFontSizeToFitWidth" value="YES"/>
+                        </userDefinedRuntimeAttributes>
                     </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pyp-gU-Bqy">
                         <rect key="frame" x="0.0" y="88" width="320" height="1"/>
@@ -42,19 +36,21 @@
             </view>
             <constraints>
                 <constraint firstItem="80o-pV-yqX" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="6Et-4B-7OS"/>
-                <constraint firstAttribute="trailing" secondItem="Hrd-BD-M3y" secondAttribute="trailing" constant="8" id="B7A-Mb-wEy"/>
-                <constraint firstItem="obs-38-cue" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="20" id="Bb4-PL-hmh"/>
+                <constraint firstAttribute="centerY" secondItem="80o-pV-yqX" secondAttribute="centerY" id="8ia-Ei-mIE"/>
                 <constraint firstAttribute="bottom" secondItem="pyp-gU-Bqy" secondAttribute="bottom" id="Bf5-Qd-fTc"/>
-                <constraint firstAttribute="centerX" secondItem="obs-38-cue" secondAttribute="centerX" id="FsI-Wj-ewF"/>
                 <constraint firstAttribute="bottom" secondItem="80o-pV-yqX" secondAttribute="bottom" constant="20" id="J4R-zK-lhQ"/>
-                <constraint firstAttribute="bottom" secondItem="Hrd-BD-M3y" secondAttribute="bottom" constant="20" id="JjB-92-Nck"/>
                 <constraint firstItem="pyp-gU-Bqy" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="QPs-b5-YzZ"/>
                 <constraint firstAttribute="trailing" secondItem="pyp-gU-Bqy" secondAttribute="trailing" id="Rrr-O0-XGK"/>
+                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="80o-pV-yqX" secondAttribute="trailing" constant="8" id="kRR-9O-TEe"/>
             </constraints>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="J4R-zK-lhQ"/>
+                </mask>
+            </variation>
             <connections>
-                <outlet property="cardTitleLabel" destination="obs-38-cue" id="Y88-tb-pFv"/>
-                <outlet property="seatTitleLabel" destination="Hrd-BD-M3y" id="ual-Om-5h7"/>
-                <outlet property="transportTitleLabel" destination="80o-pV-yqX" id="I7q-tT-ryG"/>
+                <outlet property="cardTitleLabel" destination="80o-pV-yqX" id="mEO-eZ-ayQ"/>
+                <outlet property="separatorView" destination="pyp-gU-Bqy" id="nBP-f8-jZv"/>
             </connections>
             <point key="canvasLocation" x="186" y="154.5"/>
         </collectionViewCell>

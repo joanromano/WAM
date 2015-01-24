@@ -10,7 +10,7 @@
 
 @interface TravelCardCollectionViewCell : UICollectionViewCell
 
-@property (nonatomic, copy) NSString *cardText, *seatText, *transportText;
+@property (nonatomic, copy) NSString *cardText;
 @property (nonatomic) BOOL shouldShowSeparator;
 
 @end
