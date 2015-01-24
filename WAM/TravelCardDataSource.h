@@ -13,7 +13,7 @@
 
 - (instancetype)initWithCollectionView:(UICollectionView *)collectionView;
 
-- (void)sortDataSourceWithCompletion:(void(^)(void))completion;
+- (void)sortDataSourceWithCompletion:(void(^)(NSArray *, NSArray *))completion;
 - (void)shuffleDataSourceWithCompletion:(void(^)(void))completion;
 
 @end

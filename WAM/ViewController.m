@@ -49,8 +49,13 @@
 
 - (void)sortTrip
 {
-    [self.dataSource sortDataSourceWithCompletion:^{
-        [self.collectionView reloadData];
+    [self.dataSource sortDataSourceWithCompletion:^(NSArray *previousIndexes, NSArray *currentIndexes) {
+        [self.collectionView performBatchUpdates:^{
+            [currentIndexes enumerateObjectsUsingBlock:^(NSNumber *currentIndex, NSUInteger idx, BOOL *stop) {
+                [self.collectionView moveItemAtIndexPath:[NSIndexPath indexPathForItem:idx inSection:0]
+                                             toIndexPath:[NSIndexPath indexPathForItem:currentIndex.integerValue inSection:0]];
+            }];
+        } completion:NULL];
     }];
 }
 

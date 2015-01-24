@@ -66,13 +66,28 @@ static NSString *const TCDSCellIdentifier = @"CellIdentifier";
     }
 }
 
-- (void)sortDataSourceWithCompletion:(void(^)(void))completion
+- (void)sortDataSourceWithCompletion:(void(^)(NSArray *, NSArray *))completion
 {
-    self.cards = [self.cards sort];
+    NSMutableArray *previousIndexes = [NSMutableArray array];
+    
+    for (NSInteger i = 0; i < self.cards.count; i++)
+    {
+        [previousIndexes addObject:@(i)];
+    }
+    
+    NSMutableArray *newIndexes = [previousIndexes mutableCopy];
+
+    NSArray *newCards = [self.cards sort];
+    
+    [newCards enumerateObjectsUsingBlock:^(TravelCard *card, NSUInteger idx, BOOL *stop) {
+        [newIndexes replaceObjectAtIndex:[self.cards indexOfObject:card] withObject:@(idx)];
+    }];
+    
+    self.cards = newCards;
     
     if (completion)
     {
-        completion();
+        completion(previousIndexes, newIndexes);
     }
 }
 

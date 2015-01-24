@@ -73,6 +73,11 @@
     return [NSString stringWithFormat:@"Card with origin: %@, destination: %@, transportation: %@, seat: %@", self.origin, self.destination, self.transportation, self.seatAssignment];
 }
 
+- (BOOL)isEqual:(TravelCard *)card
+{
+    return [self.origin isEqualToString:card.origin] && [self.destination isEqualToString:card.destination];
+}
+
 + (NSArray *)meansOfTransportation
 {
     return
