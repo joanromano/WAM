@@ -27,7 +27,6 @@ static NSString *const TCDSCellIdentifier = @"CellIdentifier";
 {
     if (self = [super init])
     {
-        _cards = [[TravelCard randomTravelCardStackWithNumber:10] shuffle];
         _collectionView = collectionView;
         _collectionView.dataSource = self;
         [_collectionView registerNib:[UINib nibWithNibName:NSStringFromClass(TravelCardCollectionViewCell.class) bundle:nil] forCellWithReuseIdentifier:TCDSCellIdentifier];
@@ -60,6 +59,16 @@ static NSString *const TCDSCellIdentifier = @"CellIdentifier";
 - (void)shuffleDataSourceWithCompletion:(void(^)(void))completion
 {
     self.cards = [[TravelCard randomTravelCardStackWithNumber:10] shuffle];
+    
+    if (completion)
+    {
+        completion();
+    }
+}
+
+- (void)sortDataSourceWithCompletion:(void(^)(void))completion
+{
+    self.cards = [self.cards sort];
     
     if (completion)
     {

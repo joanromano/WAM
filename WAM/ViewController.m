@@ -26,14 +26,30 @@
     self.dataSource = [[TravelCardDataSource alloc] initWithCollectionView:self.collectionView];
 }
 
+#pragma mark - Actions
+
 - (IBAction)newTripPressed
 {
     [self newTrip];
 }
 
+- (IBAction)sortTripPressed
+{
+    [self sortTrip];
+}
+
+#pragma mark - Private
+
 - (void)newTrip
 {
     [self.dataSource shuffleDataSourceWithCompletion:^{
+        [self.collectionView reloadData];
+    }];
+}
+
+- (void)sortTrip
+{
+    [self.dataSource sortDataSourceWithCompletion:^{
         [self.collectionView reloadData];
     }];
 }

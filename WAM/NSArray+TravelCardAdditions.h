@@ -11,5 +11,6 @@
 @interface NSArray (TravelCardAdditions)
 
 - (NSArray *)shuffle;
+- (NSArray *)sort;
 
 @end
